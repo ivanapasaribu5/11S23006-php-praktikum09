@@ -15,7 +15,7 @@
         }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #1c2541 0%, #0b132b 100%);
+            background: linear-gradient(135deg, #004643 0%, #0b132b 100%);
             min-height: 100vh;
             padding: 2rem;
             position: relative;
@@ -138,13 +138,13 @@
             height: 300px;
         }
         .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00875A 0%, #005C53 100%);
             color: #ffffff;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 135, 90, 0.3);
         }
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+            box-shadow: 0 12px 35px rgba(0, 135, 90, 0.4);
         }
         .btn-secondary {
             background: #e2e8f0;
@@ -186,9 +186,9 @@
             transform: translateY(-2px);
         }
         .btn-filter.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00875A 0%, #005C53 100%);
             color: #ffffff;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 135, 90, 0.3);
         }
         
         /* Search Box */
@@ -209,8 +209,8 @@
         }
         .search-box input:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: #00875A;
+            box-shadow: 0 0 0 3px rgba(0, 135, 90, 0.1);
         }
         .search-box input::placeholder {
             color: #94a3b8;
@@ -300,7 +300,7 @@
         .todo-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-            border-color: rgba(102, 126, 234, 0.3);
+    border-color: rgba(0, 135, 90, 0.3);
         }
         .todo-card::before {
             content: '';
@@ -310,7 +310,7 @@
             right: 0;
             height: 6px;
             border-radius: 20px 20px 0 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00875A 0%, #005C53 100%);
         }
         .todo-card-ghost {
             opacity: 0.4;
@@ -345,8 +345,8 @@
             color: #ffffff;
         }
         .badge-danger {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff; /* Mengganti warna oranye menjadi biru */
         }
         
         .todo-description {
@@ -390,12 +390,12 @@
             justify-content: center;
         }
         .btn-warning {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff; /* Mengganti warna oranye menjadi biru */
         }
         .btn-warning:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
         }
         .btn-outline {
             background: transparent;
@@ -544,9 +544,9 @@
         }
         input:focus, textarea:focus, select:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #00875A;
             background: #ffffff;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            box-shadow: 0 0 0 3px rgba(0, 135, 90, 0.1);
         }
         select, .form-select {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
