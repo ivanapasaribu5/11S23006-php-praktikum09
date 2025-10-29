@@ -15,7 +15,7 @@
         }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #004643 0%, #0b132b 100%);
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
             min-height: 100vh;
             padding: 2rem;
             position: relative;
@@ -138,13 +138,13 @@
             height: 300px;
         }
         .btn-primary {
-            background: linear-gradient(135deg, #00875A 0%, #005C53 100%);
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
             color: #ffffff;
-            box-shadow: 0 8px 25px rgba(0, 135, 90, 0.3);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
         }
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0, 135, 90, 0.4);
+            box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
         }
         .btn-secondary {
             background: #e2e8f0;
@@ -186,9 +186,9 @@
             transform: translateY(-2px);
         }
         .btn-filter.active {
-            background: linear-gradient(135deg, #00875A 0%, #005C53 100%);
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
             color: #ffffff;
-            box-shadow: 0 4px 15px rgba(0, 135, 90, 0.3);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
         }
         
         /* Search Box */
@@ -209,8 +209,8 @@
         }
         .search-box input:focus {
             outline: none;
-            border-color: #00875A;
-            box-shadow: 0 0 0 3px rgba(0, 135, 90, 0.1);
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
         }
         .search-box input::placeholder {
             color: #94a3b8;
@@ -300,7 +300,7 @@
         .todo-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-    border-color: rgba(0, 135, 90, 0.3);
+    border-color: rgba(99, 102, 241, 0.3);
         }
         .todo-card::before {
             content: '';
@@ -310,7 +310,7 @@
             right: 0;
             height: 6px;
             border-radius: 20px 20px 0 0;
-    background: linear-gradient(135deg, #00875A 0%, #005C53 100%);
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
         }
         .todo-card-ghost {
             opacity: 0.4;
@@ -345,8 +345,8 @@
             color: #ffffff;
         }
         .badge-danger {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: #ffffff; /* Mengganti warna oranye menjadi biru */
+            background: #e2e8f0;
+            color: #4a5568; /* Mengganti warna biru menjadi abu-abu netral */
         }
         
         .todo-description {
@@ -390,12 +390,12 @@
             justify-content: center;
         }
         .btn-warning {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: #ffffff; /* Mengganti warna oranye menjadi biru */
+            background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+            color: #ffffff; /* Mengganti warna biru menjadi teal/cyan untuk tombol Edit */
         }
         .btn-warning:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 6px 20px rgba(34, 211, 238, 0.4);
         }
         .btn-outline {
             background: transparent;
@@ -544,9 +544,9 @@
         }
         input:focus, textarea:focus, select:focus {
             outline: none;
-            border-color: #00875A;
+            border-color: #6366f1;
             background: #ffffff;
-            box-shadow: 0 0 0 3px rgba(0, 135, 90, 0.1);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
         }
         select, .form-select {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
@@ -686,7 +686,7 @@
         <div class="search-filter-group">
             <div class="filter-section">
                 <a href="index.php?filter=all<?= $search_query_param ?>" class="btn-filter <?= $current_filter == 'all' ? 'active' : '' ?>">Semua</a>
-                <a href="index.php?filter=unfinished<?= $search_query_param ?>" class="btn-filter <?= $current_filter == 'unfinished' ? 'active' : '' ?>">Aktif</a>
+                <a href="index.php?filter=unfinished<?= $search_query_param ?>" class="btn-filter <?= $current_filter == 'unfinished' ? 'active' : '' ?>">Belum Selesai</a>
                 <a href="index.php?filter=finished<?= $search_query_param ?>" class="btn-filter <?= $current_filter == 'finished' ? 'active' : '' ?>">Selesai</a>
             </div>
             <form action="index.php" method="GET" class="search-box">
@@ -718,7 +718,7 @@
                     <?php if ($todo['is_finished']): ?>
                         <span class="badge badge-success">Selesai</span>
                     <?php else: ?>
-                        <span class="badge badge-danger">Aktif</span>
+                        <span class="badge badge-danger">Belum Selesai</span>
                     <?php endif; ?>
                 </div>
                 <p class="todo-description"><?= nl2br(htmlspecialchars($todo['description'])) ?></p>
@@ -959,7 +959,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const statusElement = document.getElementById("detailTodoStatus");
             statusElement.innerHTML = isFinished === '1'
                 ? '<span class="badge badge-success">Selesai</span>' 
-                : '<span class="badge badge-danger">Aktif</span>';
+                : '<span class="badge badge-danger">Belum Selesai</span>';
 
             document.getElementById("detailTodoCreatedAt").innerText = createdAt;
             document.getElementById("detailTodoUpdatedAt").innerText = updatedAt;
